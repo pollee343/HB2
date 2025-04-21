@@ -1,0 +1,98 @@
+/* Шрифт Oranienbaum для сказочного ощущения */
+@import url('https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap');
+
+html, body, #root {
+    height: 100%;
+}
+
+
+body {
+    font-family: 'Oranienbaum', serif;
+    background-color: #fff9f0; /* мягкий бежевый */
+    color: #4b2e11; /* тёпло-коричневый */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Общий контейнер */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #fff5e1;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(100, 70, 30, 0.2);
+}
+
+/* Заголовки */
+h1, h2, h3 {
+    color: #a55d1e; /* цвет мёда */
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+/* Абзацы */
+p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+/* Кнопки — в стиле мёда */
+button {
+    background-color: #f8c454;
+    border: none;
+    border-radius: 10px;
+    padding: 0.5em 1.5em;
+    font-size: 1em;
+    font-family: 'Oranienbaum', serif;
+    cursor: pointer;
+    color: #4b2e11;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e3aa35;
+}
+
+/* Цитаты, как мысли Винни */
+blockquote {
+    background-color: #fff1d6;
+    border-left: 6px solid #f7c04a;
+    margin: 1em 0;
+    padding: 1em;
+    font-style: italic;
+    color: #654321;
+}
+
+/* Элементы списка — как шаги по лесу */
+ul {
+    list-style-type: "🐾 ";
+    padding-left: 2em;
+}
+
+a {
+    color: #a55d1e;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+input,
+button {
+    width: 70rem;
+    height: 4rem;
+}

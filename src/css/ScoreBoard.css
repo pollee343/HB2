@@ -1,0 +1,18 @@
+.scoreboard-container {
+    display: flex;
+    justify-content: center; /* центрируем по ширине */
+    margin-bottom: 1rem;
+}
+
+.scoreboard-table {
+    margin-top: 0.25rem;
+    padding: 1rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.scoreboard-table td {
+    padding: 0.1rem 1.5rem;
+    font-size: 2rem;
+}
