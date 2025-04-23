@@ -42,7 +42,7 @@
 
 .disabled-button {
     color: rgba(251, 225, 170, 0.7);
-!important; /* Красный */
+/* Красный */
     background-color: rgba(70, 37, 37, 0.78);
     color: white !important;
     cursor: not-allowed !important;
