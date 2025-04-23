@@ -58,7 +58,7 @@ export function QuestionPage({question, teams, onScore}) {
                         padding: '0.1rem'
                     }}
                 >
-                    <img src="/right.gif" alt="Праздник!"
+                    <img src="/right1.gif" alt="Праздник!"
                          style={{maxWidth: '600px', maxHeight: '600px', display: 'block', margin: '0 auto'}}/>
                 </div>
             )}
@@ -75,7 +75,7 @@ export function QuestionPage({question, teams, onScore}) {
                         padding: '0.1rem'
                     }}
                 >
-                    <img src="/wrong.gif" alt="Ошибка!"
+                    <img src="/wrong1.gif" alt="Ошибка!"
                          style={{maxWidth: '600px', maxHeight: '600px', display: 'block', margin: '0 auto'}}/>
                 </div>
             )}
