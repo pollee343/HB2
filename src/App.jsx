@@ -44,7 +44,6 @@ export default function App() {
                         disabledCells={disabledCells}
                         setDisabledCells={setDisabledCells}
                     />
-                    <p>Выберите вопрос для начала игры</p>
                 </div>
             )}
         </div>

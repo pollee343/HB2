@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/ScoreBoard.css'; // Подключаем CSS-файл
+import '../css/ScoreBoard.css';
 
 export function ScoreBoard({ teams, scores }) {
     return (
