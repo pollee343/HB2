@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://pollee343.github.io/untitled2",
+  "homepage": "https://pollee343.github.io/HB2",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
