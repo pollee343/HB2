@@ -8,7 +8,6 @@ export function QuestionPage({ question, teams, onScore }) {
     const [pendingTeam, setPendingTeam] = useState(null);
     const [clickedWrong, setClickedWrong] = useState([]);
     const [showImage, setShowImage] = useState(false);
-    const [showWrongGif, setShowWrongGif] = useState(false);
 
     useEffect(() => {
         if (timeLeft === 0) {
@@ -30,15 +29,13 @@ export function QuestionPage({ question, teams, onScore }) {
 
         if (option.correct) {
             setShowImage(true);
-            setTimeout(() => setShowImage(false), 5000);
+            setTimeout(() => setShowImage(false), 1000);
             const imageAudio = new Audio('/celebration.mp3');
             imageAudio.play().catch(() => {});
 
             setFeedback('Правильно! Выберите команду, которой начислить очки:');
             setPendingTeam(option);
         } else {
-            setShowWrongGif(true);
-            setTimeout(() => setShowWrongGif(false), 4000);
             setFeedback('Неправильно!');
             setClickedWrong(prev => [...prev, index]);
             setTimeout(() => setFeedback(''), 2000);
@@ -55,7 +52,7 @@ export function QuestionPage({ question, teams, onScore }) {
     };
 
     return (
-        <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <div style={{ position: 'relative' }}>
             <h2>{question.text || `Вопрос (ячейка ${question.row + 1}-${question.col + 1})`}</h2>
             <p>Правильный ответ приносит {question.points} очков.</p>
 
@@ -65,37 +62,17 @@ export function QuestionPage({ question, teams, onScore }) {
                 <div
                     className="celebration-image"
                     style={{
-                        position: 'fixed',
+                        position: 'absolute',
                         top: '50%',
                         left: '50%',
                         transform: 'translate(-50%, -50%)',
                         zIndex: 1000,
-                        backgroundColor: 'transparent',
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center'
+                        backgroundColor: 'rgba(255,255,255,0.9)',
+                        padding: '1rem',
+                        borderRadius: '1rem'
                     }}
                 >
-                    <img src="/right.gif" alt="Праздник!" style={{ width: '70vw', height: 'auto' }} />
-                </div>
-            )}
-
-            {showWrongGif && (
-                <div
-                    className="wrong-gif"
-                    style={{
-                        position: 'fixed',
-                        top: '50%',
-                        left: '50%',
-                        transform: 'translate(-50%, -50%)',
-                        zIndex: 1000,
-                        backgroundColor: 'transparent',
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center'
-                    }}
-                >
-                    <img src="/wrong.gif" alt="Ошибка!" style={{ width: '70vw', height: 'auto' }} />
+                    <img src="/right.gif" alt="Праздник!" style={{ maxWidth: '300px' }} />
                 </div>
             )}
 
