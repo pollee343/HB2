@@ -1,9 +1,9 @@
 {
-  "name": "HB2",
+  "name": "untitled2",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://pollee343.github.io/HB2",
+  "homepage": "https://pollee343.github.io/untitled2",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
