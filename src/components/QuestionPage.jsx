@@ -9,7 +9,7 @@ export function QuestionPage({ question, teams, onScore }) {
     const [showImage, setShowImage] = useState(false);
     const [showWrongImage, setShowWrongImage] = useState(false);
 
-    const currentAudioRef = useRef(null); // Храним текущий звук
+    const currentAudioRef = useRef(null);
 
     const stopCurrentAudio = () => {
         if (currentAudioRef.current) {
@@ -20,14 +20,14 @@ export function QuestionPage({ question, teams, onScore }) {
     };
 
     const handleAnswer = (option, index) => {
-        stopCurrentAudio(); // Остановить текущий звук
+        stopCurrentAudio();
         setClicked(index);
 
         const audio = new Audio(option.correct ? 'correct.mp3' : 'wrong.mp3');
         currentAudioRef.current = audio;
         audio.play().catch(() => {});
 
-        // Сброс обеих гифок перед показом новой
+
         setShowImage(false);
         setShowWrongImage(false);
 
@@ -35,7 +35,7 @@ export function QuestionPage({ question, teams, onScore }) {
             setShowImage(true);
             setTimeout(() => setShowImage(false), 3500);
 
-
+            const imageAudio = new Audio('/celebration.mp3');
             currentAudioRef.current = imageAudio;
             imageAudio.play().catch(() => {});
 

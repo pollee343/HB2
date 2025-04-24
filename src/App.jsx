@@ -10,7 +10,7 @@ export default function App() {
     const [scores, setScores] = useState({ team1: 0, team2: 0 });
     const [started, setStarted] = useState(false);
     const [activeQuestion, setActiveQuestion] = useState(null);
-    const [disabledCells, setDisabledCells] = useState({}); // <--- добавлено
+    const [disabledCells, setDisabledCells] = useState({});
 
     const startGame = (t1, t2) => {
         setTeams({ team1: t1, team2: t2 });
